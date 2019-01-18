@@ -46,11 +46,13 @@ puts sub_sum(list)
 def sub_sum2(list)
   lcs = 0
   cs = 0
+
   list.each do |el|
     cs += el
     cs = 0 if cs < 0
     lcs = cs if lcs < cs
   end
+  
   lcs
 end
 
